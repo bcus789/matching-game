@@ -1,6 +1,8 @@
 const buttons = document.getElementsByClassName("img")
 const imgDiv = document.getElementById("images")
 const startBtn = document.getElementById("startGame")
+const right = document.getElementById("right")
+const wrong = document.getElementById("wrong")
 const cardArray = [
     `<input type="image" src="images/card-back.PNG"  class="img" value="rock"/>`,
     `<input type="image" src="images/card-back.PNG"  class="img" value="paper"/>`,
@@ -11,7 +13,14 @@ const cardArray = [
 ]
 let checkArray = []
 
+let rightScore = 0
+let wrongScore = 0
+
 startBtn.addEventListener("click", function () {
+    rightScore = 0
+    wrongScore = 0
+    right.innerText = rightScore
+    wrong.innerText = wrongScore
     shuffle(cardArray)
     renderCards()
 })
@@ -57,11 +66,15 @@ function renderCards() {
 function compare(value){
     if (checkArray.length === 2){
         if (checkArray[0] === checkArray[1]){
+            checkArray = []
+            rightScore ++
+            right.innerText = rightScore
             console.log("hello")
         } else {
             checkArray = []
+            wrongScore ++
+            wrong.innerText = wrongScore
             console.log("nope")
         }
     }
 }
-
