@@ -63,18 +63,16 @@ function renderCards() {
     }
 }
 
-function compare(value){
-    if (checkArray.length === 2){
-        if (checkArray[0] === checkArray[1]){
+function compare(value) {
+    if (checkArray.length === 2) {
+        if (checkArray[0] === checkArray[1]) {
             checkArray = []
-            rightScore ++
+            rightScore++
             right.innerText = rightScore
-            console.log("hello")
         } else {
             checkArray = []
-            wrongScore ++
+            wrongScore++
             wrong.innerText = wrongScore
-            console.log("nope")
         }
     }
 }
