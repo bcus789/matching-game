@@ -1,0 +1,17 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+#images{
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    justify-content: center;
+}
+img {
+    width: 200px;
+}
+
+.img-before{
+    width: 200px;
+    opacity: 0%;
+}
