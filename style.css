@@ -7,11 +7,11 @@ body{
     grid-template-columns: repeat(3, 230px);
     justify-content: center;
 }
-img {
+.img {
     width: 200px;
+    margin-top: 20px;
 }
 
 .img-before{
     width: 200px;
-    opacity: 0%;
 }
